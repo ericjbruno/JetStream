@@ -1,0 +1,1 @@
+0    [JetStreamServer] WARN  ConfigurationParser  - parsing not existing file /Users/ericjbruno/Dropbox/dev/JetStream/config/moquette.conf, so fallback on default configuration!

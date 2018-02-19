@@ -1,0 +1,34 @@
+rm *.log
+
+cd "$(dirname "$0")"
+
+# resolve links - $0 may be a softlink
+PRG="$0"
+
+while [ -h "$PRG" ]; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+
+# Get standard environment variables
+PRGDIR=`dirname "$PRG"`
+
+# Only set MOQUETTE_HOME if not already set
+MOQUETTE_HOME=`cd "$PRGDIR" ; pwd`
+export MOQUETTE_HOME
+
+LOG_FILE=$MOQUETTE_HOME/log.properties
+MOQUETTE_PATH=$MOQUETTE_HOME/
+#LOG_CONSOLE_LEVEL=info
+#LOG_FILE_LEVEL=fine
+
+echo $MOQUETTE_HOME
+echo $JAVA_OPTS
+echo $JAVA_OPTS_SCRIPT
+
+java -server -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -Dlog4j.configuration="file:$LOG_FILE" -Dmoquette.path="$MOQUETTE_PATH" -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true  -DJetStream.logtostdout=true -DJetStream.compressthreshold=1000 -DJetStream.logall=rue -DJetStream.ha=alse -DJetStream.diagnostics=rue -DJetStream.queuesenders=8 -Xms512m -jar dist/JetStream.jar

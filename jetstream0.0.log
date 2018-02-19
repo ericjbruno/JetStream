@@ -1,0 +1,43 @@
+Feb 19, 2018 6:05:54 PM com.allure.JetStream.JetStream <init>
+INFO:  
+***************************************************
+JetStreamQ v1.5.0
+Copyright (c) 2010-2015 Allure Technology, Inc. All Rights Reserved.
+www.alluretechnology.com
+JetStreamQ is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, version 2 of the License.
+***************************************************
+Started Mon Feb 19 18:05:54 EST 2018
+Journal home folder: /Users/ericjbruno/jsjournal
+User home folder: /Users/ericjbruno
+***************************************************
+OS: Mac OS X, x86_64, 10.12.6
+Available CPUs/cores: 8
+Java runtime version: 1.8.0_151-25.151-b12
+Classpath: dist/JetStream.jar
+Arguments: -XX:+PrintGCDetails, -XX:+HeapDumpOnOutOfMemoryError, -Dlog4j.configuration=file:/Users/ericjbruno/Dropbox/dev/JetStream/log.properties, -Dmoquette.path=/Users/ericjbruno/Dropbox/dev/JetStream/, -Djava.awt.headless=true, -Djava.net.preferIPv4Stack=true, -DJetStream.logtostdout=true, -DJetStream.compressthreshold=1000, -DJetStream.logall=rue, -DJetStream.ha=alse, -DJetStream.diagnostics=rue, -DJetStream.queuesenders=8, -Xms512m, 
+--------------------------------------------------
+Heap mem: init = 536870912(524288K) used = 5389720(5263K) committed = 514850816(502784K) max = 3817865216(3728384K)
+Other mem: init = 2555904(2496K) used = 6280192(6133K) committed = 8323072(8128K) max = -1(-1K)
+--------------------------------------------------
+Total mem: 514850816
+Free mem: 509461096
+Max mem: 3817865216
+***************************************************
+Feb 19, 2018 6:05:54 PM com.allure.JetStream.JetStream onListening
+INFO: Server listening for clients
+Feb 19, 2018 6:05:54 PM com.allure.JetStream.RemoteClientManager <init>
+INFO: Local addresses = 10.0.1.97, 127.0.0.1
+Feb 19, 2018 6:05:54 PM com.allure.JetStream.RemoteClientManager <init>
+INFO: UDPAddress = 224.2.2.2
+Feb 19, 2018 6:05:54 PM com.allure.JetStream.JetStream createJournalFolders
+INFO: Creating root message persistence folders in /Users/ericjbruno/jsjournal
+Feb 19, 2018 6:05:54 PM com.allure.JetStream.JetStream$JetStreamServer run
+INFO: HTTP Admin Port=8081
+Feb 19, 2018 6:05:54 PM com.allure.JetStream.JetStream$JetStreamServer run
+INFO: JetStreamServer: Listening for clients
+Feb 19, 2018 6:05:55 PM com.allure.JetStream.JetStreamMessageRecovery run
+INFO: Message recovery started
+Feb 19, 2018 6:05:55 PM com.allure.JetStream.JetStreamMessageRecovery run
+INFO: Message Recovery complete

@@ -1,0 +1,1 @@
+java  -XX:+UseParNewGC -XX:+PrintGCDetails -jar dist/JetStream.jar
